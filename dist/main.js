@@ -30,18 +30,10 @@ rl.question("Opção: ", (op) => {
     const executar = async () => {
         let resultado;
         if (op === "6") {
-            const qtd = await pedirNumero("Quantos números deseja informar? (mínimo 3): ");
-            if (qtd < 3 || isNaN(qtd)) {
-                console.log("Bhaskara requer pelo menos 3 números.");
-                rl.close();
-                return;
-            }
-            const numeros = [];
-            for (let i = 0; i < qtd; i++) {
-                const num = await pedirNumero(`Digite o número ${i + 1}: `);
-                numeros.push(num);
-            }
-            resultado = new bhaskara_1.Bhaskara().calcular(numeros[0], numeros[1], numeros[2]);
+            const a = await pedirNumero("Digite o valor de A: ");
+            const b = await pedirNumero("Digite o valor de B: ");
+            const c = await pedirNumero("Digite o valor de C: ");
+            resultado = new bhaskara_1.Bhaskara().calcular(a, b, c);
         }
         else {
             const num1 = await pedirNumero("Digite o primeiro número: ");
