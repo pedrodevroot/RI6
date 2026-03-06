@@ -9,15 +9,15 @@ O objetivo do projeto é representar uma **calculadora orientada a objetos** uti
 ## ⚙️ Como executar o projeto
 
 ### 1️⃣ Instalar as dependências (caso necessário)
-
+npm install
 ---
 
 ### 2️⃣ Compilar o TypeScript
-
+npx tsc
 ---
 
 ### 3️⃣ Executar o projeto
-
+node dist/main.js
 ---
 
 ## 📌 Funcionalidades
